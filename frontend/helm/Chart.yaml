@@ -1,0 +1,5 @@
+apiVersion: v2
+name: bella-frontend-service
+description: Helm chart for Submitted Jobs Service
+version: 0.1.0
+appVersion: "1.0.0"

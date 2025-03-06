@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Universal Banner Template - Video</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .banner {
+        position: relative;
+        width: 450px;
+        height: 450px;
+        overflow: hidden;
+        background-color: #ffffff;
+      }
+      .banner-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .banner-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .banner-bg video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .white-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background: linear-gradient(
+          to bottom,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+      .logo {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 180px;
+        height: auto;
+      }
+      .text-content {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        text-align: center;
+        color: black;
+      }
+      .text-content b {
+        font-weight: bold;
+        color: {{primary_color}};
+      }
+      .text-content .background-color {
+        font-weight: bold;
+        background-color: {{primary_color}};
+        padding: 1px;
+        color: white;
+      }
+      .text-content .title {
+        font-size: 21px; 
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .text-content .subtitle {
+        font-size: 16px;
+        line-height: 1.4em;
+      }
+      .footer-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: {{primary_color}};
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        color: #fff;
+        font-size: 14px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-bg">
+
+          <video autoplay loop muted playsinline>
+            <source src="{{background_video}}" type="video/mp4">
+          </video>
+          
+      </div>
+      <div class="white-gradient"></div>
+      <img class="logo" src="{{logo_url}}" alt="{{company_name}} Logo" />
+      <div class="text-content">
+        <div class="title">{{title}}</div>
+        <div class="subtitle">{{subtitle}}</div>
+      </div>
+      <div class="footer-bar">
+        <div class="phone">
+          <i class="fas fa-phone"></i>
+          {{contact_phone}}
+        </div>
+        <div class="website">
+          <i class="fas fa-globe"></i>
+          {{website}}
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 

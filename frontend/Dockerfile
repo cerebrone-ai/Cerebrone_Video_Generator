@@ -1,0 +1,22 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+ARG NEXT_PUBLIC_API_URL
+ARG NEXT_PUBLIC_VIDEO_API_URL
+
+COPY package*.json ./
+
+RUN npm install -f
+
+COPY . .
+
+ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+ENV NEXT_PUBLIC_VIDEO_API_URL=${NEXT_PUBLIC_VIDEO_API_URL}
+RUN npm i -f
+RUN npm run build
+RUN npm start
+
+EXPOSE 3000
+
+CMD ["npm", "start"]

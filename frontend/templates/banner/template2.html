@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modern Clean Banner Template</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .banner {
+        position: relative;
+        width: 450px;
+        height: 450px;
+        overflow: hidden;
+        background-color: #ffffff;
+      }
+      .banner-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('{{background_image}}') no-repeat center/cover;
+        filter: brightness(0.9);
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+      }
+      .logo {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: auto;
+        filter: brightness(0) invert(1);
+      }
+      .text-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+        color: white;
+      }
+      .text-content .title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        line-height: 1.3;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      .text-content .background-color {
+        font-weight: bold;
+        background-color: white;
+        color: {{primary_color}};
+        padding: 3px 10px;
+        border-radius: 6px;
+        display: inline-block;
+        margin: 2px 0;
+      }
+      .text-content .subtitle {
+        font-size: 18px;
+        line-height: 1.5;
+        opacity: 0.9;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      }
+      .contact-info {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+        color: white;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      .contact-info i {
+        margin-right: 5px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-bg"></div>
+      <div class="overlay"></div>
+      <img class="logo" src="{{logo_url}}" alt="{{company_name}} Logo" />
+      <div class="text-content">
+        <div class="title">{{title}}</div>
+        <div class="subtitle">{{subtitle}}</div>
+      </div>
+      <div class="contact-info">
+        <div class="phone">
+          <i class="fas fa-phone"></i>
+          {{contact_phone}}
+        </div>
+        <div class="website">
+          <i class="fas fa-globe"></i>
+          {{website}}
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 

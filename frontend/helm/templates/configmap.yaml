@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bella-frontend-config
+  namespace: {{ .Values.namespace }}
+data:
+  NEXT_PUBLIC_SUPABASE_URL: {{ .Values.envConfig.NEXT_PUBLIC_SUPABASE_URL | quote }}
+  IMAGE_GEN_API: {{ .Values.envConfig.IMAGE_GEN_API | quote }}
+  NEXT_PUBLIC_API_URL: {{ .Values.envConfig.NEXT_PUBLIC_API_URL | quote }}
+  RESEND_FROM_EMAIL: {{ .Values.envConfig.RESEND_FROM_EMAIL | quote }}

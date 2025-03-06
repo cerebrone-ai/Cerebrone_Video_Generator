@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Neon Glow Banner Template</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .banner {
+        position: relative;
+        width: 450px;
+        height: 450px;
+        overflow: hidden;
+        background-color: #111;
+      }
+      .neon-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('{{background_image}}') no-repeat center/cover;
+        filter: brightness(0.4) contrast(1.2);
+      }
+      .neon-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 30% 70%, 
+          {{primary_color}}44 0%, 
+          transparent 50%
+        );
+        mix-blend-mode: screen;
+      }
+      .glow-line {
+        position: absolute;
+        background: {{primary_color}};
+        filter: blur(20px);
+        opacity: 0.5;
+      }
+      .line-1 {
+        width: 200px;
+        height: 2px;
+        top: 40%;
+        left: -20px;
+        transform: rotate(45deg);
+      }
+      .line-2 {
+        width: 150px;
+        height: 2px;
+        bottom: 30%;
+        right: -20px;
+        transform: rotate(-45deg);
+      }
+      .content-wrapper {
+        position: relative;
+        height: 100%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 2;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo-container {
+        background: rgba(255,255,255,0.1);
+        padding: 15px;
+        border-radius: 15px;
+        border: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 0 0 20px {{primary_color}}44;
+      }
+      .logo {
+        width: 70px;
+        height: auto;
+        filter: brightness(0) invert(1);
+      }
+      .company-badge {
+        color: white;
+        font-size: 14px;
+        padding: 8px 16px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.2);
+        text-shadow: 0 0 10px {{primary_color}};
+      }
+      .text-content {
+        color: white;
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+      .text-content .title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        text-shadow: 0 0 20px {{primary_color}};
+      }
+      .text-content .background-color {
+        font-weight: bold;
+        background-color: {{primary_color}};
+        color: white;
+        padding: 4px 12px;
+        border-radius: 8px;
+        display: inline-block;
+        margin: 2px 0;
+        box-shadow: 0 0 20px {{primary_color}};
+        text-shadow: none;
+      }
+      .text-content .subtitle {
+        font-size: 16px;
+        line-height: 1.5;
+        opacity: 0.9;
+        text-shadow: 0 0 10px rgba(255,255,255,0.5);
+      }
+      .footer {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .contact-pill {
+        color: white;
+        font-size: 14px;
+        padding: 10px 20px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 25px;
+        border: 1px solid rgba(255,255,255,0.2);
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 15px {{primary_color}}33;
+      }
+      .contact-pill i {
+        margin-right: 8px;
+        color: {{primary_color}};
+        text-shadow: 0 0 10px {{primary_color}};
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <div class="banner">
+      <div class="neon-container"></div>
+      <div class="neon-overlay"></div>
+      <div class="glow-line line-1"></div>
+      <div class="glow-line line-2"></div>
+      <div class="content-wrapper">
+        <div class="header">
+          <div class="logo-container">
+            <img class="logo" src="{{logo_url}}" alt="{{company_name}} Logo" />
+          </div>
+          <div class="company-badge">{{company_name}}</div>
+        </div>
+        <div class="text-content">
+          <div class="title">{{title}}</div>
+          <div class="subtitle">{{subtitle}}</div>
+        </div>
+        <div class="footer">
+          <div class="contact-pill">
+            <i class="fas fa-phone"></i>
+            {{contact_phone}}
+          </div>
+          <div class="contact-pill">
+            <i class="fas fa-globe"></i>
+            {{website}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 
