@@ -46,14 +46,14 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
     ```
 5. Create a '.env.local' file with your API Keys and configurations:
    ```bash
-    NEXT_PUBLIC_WEBSOCKET_URL=
+    NEXT_PUBLIC_WEBSOCKET_URL=<your_api_key>
     NEXT_PUBLIC_API_URL=http://localhost:8000
-    IMAGE_GEN_API=
-    IMAGE_GEN_API_KEY=
-    RESEND_API_KEY=
-    RESEND_AUDIENCE_LIST_ID=
-    RESEND_FROM_EMAIL=
-    FAL_KEY=
+    IMAGE_GEN_API=<your_api_key>
+    IMAGE_GEN_API_KEY=<your_api_key>
+    RESEND_API_KEY=<your_api_key>
+    RESEND_AUDIENCE_LIST_ID=<your_api_key>
+    RESEND_FROM_EMAIL=<your_api_key>
+    FAL_KEY=<your_api_key>
     NEXT_PUBLIC_VIDEO_API_URL=http://localhost:5002/
    ```
 
