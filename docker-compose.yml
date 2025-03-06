@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5002:5002"
+    environment:
+      - FLASK_APP=main.py
+      - FLASK_DEBUG=0
+      - PORT=5002
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:5002
+        NEXT_PUBLIC_VIDEO_API_URL: http://localhost:5002/video
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5002
+      - NEXT_PUBLIC_VIDEO_API_URL=http://localhost:5002/video
+      - OPENAI_API_KEY
+    depends_on:
+      - backend  # Frontend should wait for the backend, but not vice versa
