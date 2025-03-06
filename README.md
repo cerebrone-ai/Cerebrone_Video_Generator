@@ -37,14 +37,14 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
     pip install -r requirements.txt
     ```
 
-4. Create a `.env` file with your API keys and configuration:
+4. Create a `.env` file with your API keys and configuration within backend folder:
     ```bash
     OPENAI_API_KEY=<your_openai_api_key>
     FAL_KEY=<your_fal_ai_key>
     NARAKEET_API_KEY=<your_narakeet_api_key>
     IMAGE_GEN_API_KEY=<your_image_gen_api_key>
     ```
-5. Create a '.env.local' file with your API Keys and configurations:
+5. Create a '.env.local' file with your API Keys and configurations within frontend folder:
    ```bash
     NEXT_PUBLIC_WEBSOCKET_URL=<your_api_key>
     NEXT_PUBLIC_API_URL=http://localhost:8000
