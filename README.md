@@ -58,34 +58,12 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
    npm run build
    npm start
 
-4. Directly make a POST request to start video generation:
-    ```bash
-    curl -X POST http://localhost:5001/api/v1/generate-video \
-    -H "Content-Type: application/json" \
-    -d '{
-        "project_title": "My Video Project",
-        "project_description": "A video about my project",
-        "target_audience": "tech enthusiasts",
-        "duration": 300,
-        "category": "technology"
-    }'
-    ```
-
-5. get generation status:
-    ```bash
-    curl http://localhost:5001/api/v1/video-status/<task_id>
-    ```
 
 ## Docker
 
-1. Build the Docker image:
+1. Run the services using Docker Compose:
     ```bash
-    docker build -t ai-video-generator .
-    ```
-
-2. Run the services using Docker Compose:
-    ```bash
-    docker-compose up
+    docker-compose up --build
     ```
 
 
