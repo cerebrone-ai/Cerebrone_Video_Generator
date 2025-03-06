@@ -44,6 +44,18 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
     NARAKEET_API_KEY=<your_narakeet_api_key>
     IMAGE_GEN_API_KEY=<your_image_gen_api_key>
     ```
+5. Create a '.env.local' file with your API Keys and configurations:
+   ```bash
+    NEXT_PUBLIC_WEBSOCKET_URL=
+    NEXT_PUBLIC_API_URL=http://localhost:8000
+    IMAGE_GEN_API=
+    IMAGE_GEN_API_KEY=
+    RESEND_API_KEY=
+    RESEND_AUDIENCE_LIST_ID=
+    RESEND_FROM_EMAIL=
+    FAL_KEY=
+    NEXT_PUBLIC_VIDEO_API_URL=http://localhost:5002/
+   ```
 
 ## Usage
 
