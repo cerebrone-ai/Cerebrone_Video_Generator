@@ -20,9 +20,8 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
 ## Prerequisites
 
 - Python 3.11+
-- Redis server
-- Supabase account
 - Fal AI account
+- FirstImpress account
 - OpenAI API key
 
 ## Installation
@@ -42,25 +41,24 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
     ```bash
     OPENAI_API_KEY=<your_openai_api_key>
     FAL_KEY=<your_fal_ai_key>
-    SUPABASE_URL=<your_supabase_url>
-    SUPABASE_KEY=<your_supabase_key>
     NARAKEET_API_KEY=<your_narakeet_api_key>
-
-    SPACES_REGION=<your_spaces_region>
-    SPACES_ENDPOINT=<your_spaces_endpoint>
-    SPACES_KEY=<your_spaces_key>
-    SPACES_SECRET=<your_spaces_secret>
-    SPACES_BUCKET=<your_spaces_bucket>
+    IMAGE_GEN_API_KEY=<your_image_gen_api_key>
     ```
 
 ## Usage
 
 1. Start the Flask server:
     ```bash
-    flask run
+    cd backend
+    python main.py
     ```
+2. Start the frontend Application:
+   
+   npm i -f
+   npm run build
+   npm start
 
-2. Make a POST request to start video generation:
+4. Directly make a POST request to start video generation:
     ```bash
     curl -X POST http://localhost:5001/api/v1/generate-video \
     -H "Content-Type: application/json" \
@@ -73,30 +71,23 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
     }'
     ```
 
-3. Get generation status:
+5. get generation status:
     ```bash
     curl http://localhost:5001/api/v1/video-status/<task_id>
     ```
 
 ## Docker
 
-1. Run the services using Docker Compose:
+1. Build the Docker image:
     ```bash
-    docker-compose up --build
+    docker build -t ai-video-generator .
+    ```
+
+2. Run the services using Docker Compose:
+    ```bash
+    docker-compose up
     ```
 
 
-## Testing
 
-To run the tests:
-
-1. Install the dependencies:
-    ```bash
-    pip install -r tests/requirements-test.txt
-    ```
-
-2. Run the tests:
-    ```bash
-pytest
-```
 
