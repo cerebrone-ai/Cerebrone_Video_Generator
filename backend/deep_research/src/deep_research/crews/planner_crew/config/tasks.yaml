@@ -1,0 +1,11 @@
+research_task:
+  description: >
+    Conduct deep research relevant to information present in {description}. 
+    Ensure you research deeply about everything mentioned in description including any company mentioned or topic mentioned in the description, get demographic details, 
+    motivation, purpose, mission, etc.  
+    Make sure you find latest relevant information related to {description}.
+    Do not visit justdial.com website for any research
+    After generating the content, ask the user for any more relevant information to improve your research.
+  expected_output: > 
+    Refined and concise {description} with relevant details added from research
+  agent: planner

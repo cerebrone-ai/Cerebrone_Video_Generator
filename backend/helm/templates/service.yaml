@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: video-script-generator-api
+  namespace: {{ .Values.namespace }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 5001
+      protocol: TCP
+  selector:
+    app: video-script-generator-api

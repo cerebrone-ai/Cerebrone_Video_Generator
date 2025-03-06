@@ -1,0 +1,5 @@
+apiVersion: v2
+name: video-script-generator-api
+description: Helm chart for video-script-generator-api
+version: 0.1.0
+appVersion: "1.0.0"

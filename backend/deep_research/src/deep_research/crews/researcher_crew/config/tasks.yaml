@@ -1,0 +1,8 @@
+research_task:
+  description: >
+    Conduct in depth research to find more relevant information and refine the given {content} further.
+    Do not visit justdial.com website for any research
+  expected_output: >
+    Further Refined {content} with more relevant information added from research, make it concise (1 para) at max
+  agent: researcher
+
