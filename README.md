@@ -53,10 +53,12 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
     python main.py
     ```
 2. Start the frontend Application:
-   
+
+   ```bash
    npm i -f
    npm run build
    npm start
+   ```
 
 
 ## Docker
