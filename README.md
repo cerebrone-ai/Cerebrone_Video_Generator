@@ -21,7 +21,6 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
 
 - Python 3.11+
 - Fal AI account
-- FirstImpress account
 - OpenAI API key
 
 ## Installation
@@ -42,18 +41,11 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
     OPENAI_API_KEY=<your_openai_api_key>
     FAL_KEY=<your_fal_ai_key>
     NARAKEET_API_KEY=<your_narakeet_api_key>
-    IMAGE_GEN_API_KEY=<your_image_gen_api_key>
     ```
 5. Create a '.env.local' file with your API Keys and configurations within frontend folder:
    ```bash
-    NEXT_PUBLIC_WEBSOCKET_URL=<your_api_key>
+   
     NEXT_PUBLIC_API_URL=http://localhost:8000
-    IMAGE_GEN_API=<your_api_key>
-    IMAGE_GEN_API_KEY=<your_api_key>
-    RESEND_API_KEY=<your_api_key>
-    RESEND_AUDIENCE_LIST_ID=<your_api_key>
-    RESEND_FROM_EMAIL=<your_api_key>
-    FAL_KEY=<your_api_key>
     NEXT_PUBLIC_VIDEO_API_URL=http://localhost:5002/
    ```
 
