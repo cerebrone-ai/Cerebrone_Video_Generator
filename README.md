@@ -20,6 +20,7 @@ A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate com
 - Python 3.11+
 - Fal AI account
 - OpenAI API key
+- Serper Dev Key
 
 ## Installation
 
