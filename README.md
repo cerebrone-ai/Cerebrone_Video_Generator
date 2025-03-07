@@ -59,6 +59,7 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
 2. Start the frontend Application:
 
    ```bash
+   cd frontend
    npm i -f
    npm run build
    npm start
