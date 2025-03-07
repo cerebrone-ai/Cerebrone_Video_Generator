@@ -5,7 +5,7 @@ A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate com
 ## Features
 
 - Generate complete video production plans including:
-  - Professional video scripts
+  - Deep research based video script generation
   - Detailed storyboards broken into scenes
   - Shot-by-shot details with AI prompts and voiceover scripts
 - Asynchronous video and voiceover generation using Fal AI
@@ -20,7 +20,6 @@ A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate com
 - Python 3.11+
 - Fal AI account
 - OpenAI API key
-- Narakeet API key
 
 ## Installation
 
@@ -39,7 +38,6 @@ A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate com
     ```bash
     OPENAI_API_KEY=<your_openai_api_key>
     FAL_KEY=<your_fal_ai_key>
-    NARAKEET_API_KEY=<your_narakeet_api_key>
     ```
 5. Create a '.env.local' file with your API Keys and configurations within frontend folder:
    ```bash
@@ -74,8 +72,9 @@ A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate com
    ```sh
    $ cp $PWD/backend/env.example $PWD/backend/.env.backend
    ```
-   - Add the `OPENAI_KEY`, `FAL_KEY`, `SERPER_API_KEY` and `NARAKEET_API_KEY` in the `.env.backend` file.
 
+   - Add the `OPENAI_KEY`, `FAL_KEY`, `SERPER_API_KEY` and `NARAKEET_API_KEY` in the `.env.backend` file.
+   - Add the `OPENAI_KEY` and `FAL_KEY` in the `.env.backend` file.
    - For the frontend:
 
    ```sh
