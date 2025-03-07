@@ -65,15 +65,11 @@ A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate com
 
 ## Docker
 
-1. Copy the required env variable
-
-   - For the backend:
+1. Copy the required env variable in the project root dir
 
    ```sh
    $ cp $PWD/backend/env.example $PWD/backend/.env.backend
    ```
-   
-   - For the frontend:
 
    ```sh
    $ cp $PWD/frontend/env.example $PWD/frontend/.env.frontend
