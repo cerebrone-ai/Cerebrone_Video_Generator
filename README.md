@@ -9,8 +9,6 @@ A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate com
   - Detailed storyboards broken into scenes
   - Shot-by-shot details with AI prompts and voiceover scripts
 - Asynchronous video and voiceover generation using Fal AI
-- Background task processing with Celery
-- Progress tracking with Supabase
 - Structured output using Pydantic models
 - Configurable video parameters (duration, target audience, etc.)
 - Error handling and logging
