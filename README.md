@@ -75,8 +75,24 @@ A Flask-based REST API that uses LangChain, GPT-4, and Fal AI to generate comple
 
 ## Docker
 
-1. Run the services using Docker Compose:
-    ```bash
+1. Copy the required env variable
+
+   - For the backend:
+
+   ```sh
+   $ cp $PWD/backend/env.example $PWD/backend/.env.backend
+   ```
+   - Add the `OPENAI_KEY`, `FAL_KEY` and `NARAKEET_API_KEY` in the `.env.backend` file.
+
+   - For the frontend:
+
+   ```sh
+   $ cp $PWD/frontend/env.example $PWD/frontend/.env.frontend
+   ```
+
+2. Run the docker using the docker compose. For installation please refer to the [link](https://docs.docker.com/compose/install/).
+
+    ```sh
     docker-compose up --build
     ```
 

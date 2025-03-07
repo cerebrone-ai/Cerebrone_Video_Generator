@@ -3,6 +3,7 @@ services:
     build: ./backend
     ports:
       - "5002:5002"
+    env_file: ./backend/.env.backend
     environment:
       - FLASK_APP=main.py
       - FLASK_DEBUG=0xc
@@ -15,6 +16,7 @@ services:
         NEXT_PUBLIC_VIDEO_API_URL: http://localhost:5002/
     ports:
       - "3000:3000"
+    env_file: ./frontend/.env.frontend
     environment:
       - NEXT_PUBLIC_API_URL= http://localhost:8000
       - NEXT_PUBLIC_VIDEO_API_URL=http://localhost:5002/
