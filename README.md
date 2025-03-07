@@ -74,7 +74,7 @@ A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate com
    ```sh
    $ cp $PWD/backend/env.example $PWD/backend/.env.backend
    ```
-   - Add the `OPENAI_KEY`, `FAL_KEY` and `NARAKEET_API_KEY` in the `.env.backend` file.
+   - Add the `OPENAI_KEY`, `FAL_KEY`, `SERPER_API_KEY` and `NARAKEET_API_KEY` in the `.env.backend` file.
 
    - For the frontend:
 
