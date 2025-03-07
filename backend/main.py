@@ -420,12 +420,7 @@ async def generate_voiceover(task_id: str, text: str, language: str) -> Dict:
     
     try:
         # Generate audio URL using Text2Speech
-        audio_url = await asyncio.to_thread(
-            text2speech.generate_speech,
-            text,
-            language
-        )
-        
+        audio_url = text2speech.make_speech(text,language)
         return {"url": audio_url}
         
     except Exception as e:
