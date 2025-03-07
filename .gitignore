@@ -1,2 +1,14 @@
-./backend/.env.backend
-./frontend/.env.frontend
+## Ignore the env local files in frontend/backend
+
+./frontend/.env*
+./backend/.env*
+
+## Ignore the node_modules
+
+./frontend/node_modules/
+./frontend/jspm_packages/
+
+
+
+
+
