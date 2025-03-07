@@ -5,7 +5,7 @@ A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate com
 ## Features
 
 - Generate complete video production plans including:
-  - Deep research on user provided video description
+  - Deep research based video script generation
   - Detailed storyboards broken into scenes
   - Shot-by-shot details with AI prompts and voiceover scripts
 - Asynchronous video and voiceover generation using Fal AI
